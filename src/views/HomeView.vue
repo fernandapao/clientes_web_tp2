@@ -1,15 +1,12 @@
 <template>
   <div class="home-container">
     <div class="hero-section">
-      <!-- Fondo con imagen decorativa -->
-      <div class="hero-background"></div>
-      <!-- Botón para entrar -->
+      <div class="hero-background">
       <v-btn color="primary" class="hero-button" @click="goToLogin">
         Iniciar Sesión
       </v-btn>
-      <!-- Contenido principal -->
+      </div>
       <div class="hero-content">
-        <!-- Agregar la imagen del logo -->
         <img
           src="/imagenes/logo_restaurante.jpg"
           alt="Logo Restaurante"
@@ -44,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-/* Estilos para HomeView */
+
 
 body {
   margin: 0;
@@ -55,7 +52,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+  height: 100vh;
   background-color: #000;
   overflow: hidden;
 }
@@ -81,10 +78,10 @@ body {
 
 .hero-button {
   position: absolute;
-  top: 20px; /* Espacio desde el borde superior */
-  left: 50%; /* Centrado horizontal */
-  transform: translateX(-50%); /* Ajuste del botón al centro */
-  z-index: 2; /* Asegura que el botón esté sobre otros elementos */
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
 }
 
 .hero-content {

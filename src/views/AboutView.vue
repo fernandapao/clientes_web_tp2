@@ -169,15 +169,15 @@ h2 {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 0 15px;
-  height: 50px; /* Mayor altura para el input */
-  font-size: 16px; /* Tamaño de fuente más grande */
+  height: 50px;
+  font-size: 16px;
 }
 
 .v-text-field input {
   color: #333;
   padding: 10px;
-  font-size: 16px; /* Tamaño de fuente para el texto del input */
-  width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+  font-size: 16px;
+  width: 100%;
 }
 
 .v-btn.search-button {
@@ -185,10 +185,10 @@ h2 {
   color: #fff;
   border-radius: 4px;
   text-transform: uppercase;
-  height: 50px; /* Altura del botón */
-  padding: 0 20px; /* Padding horizontal */
-  font-size: 16px; /* Tamaño de fuente del botón */
-  margin-left: 10px; /* Espacio entre el input y el botón */
+  height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  margin-left: 10px;
 }
 
 .v-btn.search-button:hover {
@@ -212,8 +212,8 @@ h2 {
   margin: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  background-color: #ffffff; /* Fondo blanco para las tarjetas */
-  color: #333; /* Texto oscuro para contraste */
+  background-color: #ffffff;
+  color: #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 300px;
   transition:
@@ -246,21 +246,21 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #2196f3; /* Color de fondo del botón */
+  background-color: #2196f3;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #1976d2; /* Color del botón en hover */
+  background-color: #1976d2;
 }
 
 .edit-form {
   max-width: 500px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #ffffff; /* Fondo blanco para el formulario */
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -285,7 +285,7 @@ select {
 }
 
 .submit-button {
-  background-color: #4caf50; /* Color de fondo del botón de guardar */
+  background-color: #4caf50;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -294,11 +294,11 @@ select {
 }
 
 .submit-button:hover {
-  background-color: #45a049; /* Color del botón de guardar en hover */
+  background-color: #45a049;
 }
 
 .cancel-button {
-  background-color: #ccc; /* Color de fondo del botón de cancelar */
+  background-color: #ccc;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -308,7 +308,7 @@ select {
 }
 
 .cancel-button:hover {
-  background-color: #aaa; /* Color del botón de cancelar en hover */
+  background-color: #aaa;
 }
 
 img.no-pedidos {

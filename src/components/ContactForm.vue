@@ -53,7 +53,6 @@ export default {
   methods: {
     sendMessage() {
       if (this.$refs.form.validate()) {
-        // Aquí puedes agregar lógica para enviar el formulario
         this.snackbar = true
         this.name = ''
         this.email = ''
@@ -66,8 +65,8 @@ export default {
 
 <style scoped>
 .contact-form {
-  background-color: #fff; /* Fondo blanco para el formulario */
-  color: #333; /* Texto oscuro para contraste */
+  background-color: #fff;
+  color: #333;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -79,23 +78,23 @@ export default {
 }
 
 .v-btn {
-  background-color: #2196f3; /* Color de fondo del botón */
-  color: #fff; /* Texto blanco del botón */
+  background-color: #2196f3;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
   text-transform: uppercase;
 }
 
 .v-btn:hover {
-  background-color: #1976d2; /* Color del botón en hover */
+  background-color: #1976d2;
 }
 
 .v-snackbar {
-  background-color: #323232; /* Fondo oscuro del snackbar */
-  color: #fff; /* Texto blanco del snackbar */
+  background-color: #323232;
+  color: #fff;
 }
 
 .v-snackbar .v-btn {
-  color: #fff; /* Texto blanco del botón de cerrar */
+  color: #fff;
 }
 </style>
