@@ -4,8 +4,8 @@
       <!-- Fondo con imagen decorativa -->
       <div class="hero-background"></div>
       <!-- Botón para entrar -->
-      <v-btn color="primary" class="hero-button" @click="goToMenuView">
-        Entrar
+      <v-btn color="primary" class="hero-button" @click="goToLogin">
+        Iniciar Sesión
       </v-btn>
       <!-- Contenido principal -->
       <div class="hero-content">
@@ -25,10 +25,10 @@
 
 <script>
 export default {
-  name: 'HomeView',
+  name: 'Auth',
   methods: {
-    goToMenuView() {
-      this.$router.push({ name: 'menu' })
+    goToLogin() {
+      this.$router.push('/auth')
     }
   },
   mounted() {

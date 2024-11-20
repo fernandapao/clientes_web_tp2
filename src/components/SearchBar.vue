@@ -1,3 +1,5 @@
+<!-- src/components/SearchBar.vue -->
+
 <template>
   <v-text-field
     v-model="searchQuery"

@@ -1,3 +1,4 @@
+<!-- src/components/MenuForm.vue -->
 <template>
   <form
     @submit.prevent="addItem"
