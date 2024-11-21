@@ -1,6 +1,6 @@
 <template>
   <div class="pedido">
-    <h1>Mis Pedidos</h1>
+    <h1>Historial de Pedidos</h1>
     <v-text-field
       v-model="searchQuery"
       label="Buscar por Nombre o Dirección del cliente"
@@ -20,9 +20,9 @@
             alt="Imagen del plato"
             class="pedido-image"
           />
-          <p><strong>Nombre:</strong> {{ pedido.nombre }}</p>
+          <p><strong>Nombre del cliente:</strong> {{ pedido.nombre }}</p>
           <p><strong>Teléfono:</strong> {{ pedido.telefono }}</p>
-          <p><strong>Dirección:</strong> {{ pedido.direccion }}</p>
+          <p><strong>Dirección:</strong>{{ pedido.direccion }}</p>
           <p><strong>Preferencia:</strong> {{ pedido.preferencia }}</p>
           <p><strong>Comida:</strong> {{ pedido.comida }}</p>
 
@@ -80,6 +80,7 @@ export default {
   data() {
     return {
       pedidos: [],
+      loggedUserEmail: '',
       isEditing: false,
       currentItem: {
         nombre: '',
@@ -101,8 +102,11 @@ export default {
   },
   methods: {
     removeItem(id) {
+      const confirmDelete = confirm("¿Estás seguro de que deseas eliminar este pedido?");
+  if (confirmDelete) {
       this.pedidos = this.pedidos.filter((pedido) => pedido.id !== id)
       this.savePedidos()
+      }
     },
     editItem(item) {
       this.isEditing = true
@@ -115,7 +119,8 @@ export default {
       if (index !== -1) {
         this.pedidos.splice(index, 1, this.currentItem)
         this.savePedidos()
-        this.isEditing = false
+        this.isEditing = false;
+        alert('Pedido actualizado correctamente');
       }
     },
     cancelEdit() {
@@ -137,9 +142,10 @@ export default {
     }
   },
   mounted() {
-    this.loadPedidos()
+    this.loadPedidos();
   }
 }
+
 </script>
 
 <style scoped>
@@ -219,6 +225,7 @@ h2 {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .pedido-tarjeta:hover {

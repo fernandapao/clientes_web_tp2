@@ -3,7 +3,7 @@
     <h1>{{ isLogin ? 'Iniciar Sesión' : 'Registrarse' }}</h1>
     <form @submit.prevent="isLogin ? login() : register()">
       <div>
-        <label for="email">Correo Electrónico:</label>
+        <label for="email">Correo Electrónico:</label> <br>
         <input
           type="email"
           v-model="email"
@@ -12,7 +12,7 @@
         />
       </div>
       <div>
-        <label for="password">Contraseña:</label>
+        <label for="password">Contraseña:</label> <br>
         <input
           type="password"
           v-model="password"
@@ -25,7 +25,7 @@
       </button>
     </form>
     <button v-if="isAuthenticated" @click="logout">Cerrar Sesión</button>
-    <p>
+    <p class="no-cuenta">
       {{ isLogin ? '¿No tienes una cuenta?' : '¿Ya tienes una cuenta?' }}
       <span @click="toggleAuthMode">{{
         isLogin ? 'Regístrate' : 'Inicia Sesión'
@@ -52,6 +52,9 @@ export default {
     }
   },
   methods: {
+    toggleAuthMode() {
+      this.isLogin = !this.isLogin;
+    },
     async logout() {
       try {
         await signOut(auth)
@@ -105,7 +108,7 @@ export default {
 
 <style scoped>
 .auth-container {
-  max-width: 400px;
+  max-width: 500px;
   margin: 50px auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -120,6 +123,7 @@ export default {
 .auth-container form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: white;
 }
 .auth-container label {
@@ -153,5 +157,9 @@ export default {
 }
 .auth-container span:hover {
   text-decoration: underline;
+}
+
+p.no-cuenta {
+    padding: 15px;
 }
 </style>

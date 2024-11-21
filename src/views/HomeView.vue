@@ -1,11 +1,11 @@
 <template>
   <div class="home-container">
     <div class="hero-section">
-      <div class="hero-background">
+      <div class="hero-background"> </div>
       <v-btn color="primary" class="hero-button" @click="goToLogin">
         Iniciar Sesión
       </v-btn>
-      </div>
+     
       <div class="hero-content">
         <img
           src="/imagenes/logo_restaurante.jpg"
@@ -78,7 +78,7 @@ body {
 
 .hero-button {
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -96,7 +96,7 @@ body {
 
 .hero-logo {
   max-width: 40%;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .hero-text {
